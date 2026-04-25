@@ -7,7 +7,7 @@ app.post('/api/tax-calc', (req, res) => {
     let impotDu = 0;
     let revenuImposable = revenu;
 
-    // Vérifications imbriquées pour augmenter artificiellement la complexité V(G)
+
     if (revenu !== undefined) {
         if (revenu < 0) {
             revenuImposable = 0;
