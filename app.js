@@ -16,7 +16,7 @@ const getTaxeSociale = (statut, ca) => (statut === "Freelance" ? ca * 0.05 : 0);
 app.post('/api/tax-calc', (req, res) => {
     const { revenu, statut, mariee, enfants, chiffreAffaires = 0 } = req.body;
     
-    // Logique ultra-plate = complexité minimale
+    // complexité minimale
     const revenuBase = mariee ? revenu / 2 : revenu;
     const impotDeBase = getTauxTranche(revenuBase);
     const impotApresReduc = getReductionFamille(impotDeBase, enfants);
