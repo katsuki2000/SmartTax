@@ -6,10 +6,10 @@ app.use(express.json());
 const getTauxTranche = (revenu) => {
     if (revenu <= 10000) return 0;
     if (revenu <= 30000) return (revenu - 10000) * 0.15;
-    return 3000 + (revenu - 30000) * 0.30;
+    return 3000 + (revenu - 30000) * 0.3;
 };
 
-const getReductionFamille = (impot, enfants) => (enfants > 2 ? impot * 0.90 : impot);
+const getReductionFamille = (impot, enfants) => (enfants > 2 ? impot * 0.9 : impot);
 
 const getTaxeSociale = (statut, ca) => (statut === "Freelance" ? ca * 0.05 : 0);
 
