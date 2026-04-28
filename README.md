@@ -52,6 +52,8 @@ L'API sera accessible par défaut sur le port 3000 (ou selon votre configuration
 
 ## Tests
 
+Les tests unitaires sont écrits avec [Jest](https://jestjs.io/).
+
 Pour exécuter les tests et générer un rapport de couverture :
 ```bash
 npm test
